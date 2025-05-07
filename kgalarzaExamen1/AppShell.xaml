@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="kgalarzaExamen1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:kgalarzaExamen1"
+    Shell.FlyoutBehavior="Disabled"
+    Title="kgalarzaExamen1">
+
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate local:Views.vLogin}"
+        Route="LoginPage" />
+
+    <ShellContent
+        Title="Registro"
+        ContentTemplate="{DataTemplate local:Views.vRegister}"
+        Route="RegistroPage" />
+    
+
+</Shell>

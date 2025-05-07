@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kgalarzaExamen1.Views.vMe"
+             Title="">
+    <VerticalStackLayout
+        Spacing="10"
+        Margin="25"
+        Padding="25">
+
+        <Label
+            Text="Usuario >> Desconocido"
+            TextColor="Red"
+            FontSize="20"
+            HorizontalOptions="End"
+            />
+
+        <Grid RowSpacing="10"
+          ColumnSpacing="10"
+          RowDefinitions="Auto,Auto,Auto,Auto"
+          ColumnDefinitions="*,*">
+
+            <Label HorizontalOptions="Center" Text="Nombre:" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="entryNombre" Text="KEVIN GALARZA" Grid.Row="0" Grid.Column="1" IsEnabled="False"/>
+
+            <Label HorizontalOptions="Center" Text="Curso:" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="entryCurso" Text="8 A" Grid.Row="1" Grid.Column="1" IsEnabled="False"/>
+
+            <Label HorizontalOptions="Center" Text="Universidad:" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="entryUniversidad" Text="UNIVERSIDAD ISRAEL" Grid.Row="2" Grid.Column="1" IsEnabled="False"/>
+
+            <Label HorizontalOptions="Center" Text="Materia:" Grid.Row="3" Grid.Column="0"/>
+            <Entry x:Name="entryMateria" Text="DESARROLLO MOVIL" Grid.Row="3" Grid.Column="1" IsEnabled="False"/>
+
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kgalarzaExamen1.Views.vRegister"
+             Title="">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20"
+                             Margin="25"
+                             Padding="25">
+
+            <Label x:Name="txtUSer" 
+                  Text=""
+                  FontSize="25"
+                  TextColor="Green" 
+                  HorizontalOptions="End"
+                  HorizontalTextAlignment="End"/>
+
+            <Label Text="Registro"
+                  FontSize="25"
+                  TextColor="Red" 
+                  HorizontalOptions="Center"
+                  HorizontalTextAlignment="Center" />
+
+            <Grid RowDefinitions="Auto,Auto"
+                  ColumnDefinitions="*,*,*"
+                  ColumnSpacing="10"
+                  RowSpacing="10">
+
+                <Label Text="Nombre" Grid.Row="0" Grid.Column="0" />
+                <Label Text="Apellido" Grid.Row="0" Grid.Column="1" />
+                <Label Text="Voltiamperio (VA)" Grid.Row="0" Grid.Column="2" />
+
+                <Entry x:Name="entryNombre" Placeholder="Ingresar nombre" Grid.Row="1" Grid.Column="0" />
+                <Entry x:Name="entryApellido" Placeholder="Ingresar apellido" Grid.Row="1" Grid.Column="1" />
+                <Picker x:Name="pickerVA" Grid.Row="1" Grid.Column="2">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>600</x:String>
+                            <x:String>850</x:String>
+                            <x:String>1200</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Grid>
+
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto"
+                  ColumnDefinitions="*,*"
+                  ColumnSpacing="10"
+                  RowSpacing="10">
+
+                <Label Text="Fecha:" Grid.Row="0" Grid.Column="0" />
+                <DatePicker x:Name="datePickerFecha" Grid.Row="0" Grid.Column="1" />
+
+                <Label Text="Ciudad:" Grid.Row="1" Grid.Column="0" />
+                <Picker x:Name="pickerCiudad" Grid.Row="1" Grid.Column="1">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Quito</x:String>
+                            <x:String>Guayaquil</x:String>
+                            <x:String>Cuenca</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="Monto Inicial:" Grid.Row="2" Grid.Column="0" />
+                <Entry x:Name="entryMontoInicial" Keyboard="Numeric" Grid.Row="2" Grid.Column="1" 
+                       IsEnabled="False"/>
+
+                <VerticalStackLayout
+                        Grid.Row="3"
+                        Grid.Column="0">
+                    <Button Text="Calcular Pago Mensual"
+                        Clicked="OnCalcularPagoClicked"
+                        Style="{StaticResource btnbBue}"
+                        VerticalOptions="End"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                       Grid.Row="3"
+                       Grid.Column="1">
+
+                    <Label Text="Cuota Mensual:"
+                           Margin="0,10"/>
+                    <Entry x:Name="entryCuotaMensual"
+                       Placeholder="Cuota mensual"
+                       IsReadOnly="True"
+                       IsEnabled="False"/>
+                    
+                </VerticalStackLayout>
+                
+
+            </Grid>
+
+            <Button Text="Ver Resumen"
+                    Clicked="OnVerResumenClicked"
+                    Style="{StaticResource btnbBue}"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
