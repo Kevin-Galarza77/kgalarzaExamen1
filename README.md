@@ -1,9 +1,5 @@
 # kgalarzaExamen1
 
-## Pantalla de Inicio
-
-![Pantalla de Inicio](docs/images/acercaDe.png)
-
 ## Pantalla de Login
 
 ![Pantalla de Login](docs/images/login.png)
@@ -15,3 +11,7 @@
 ## Resumen
 
 ![Resumen](docs/images/resumen.png)
+
+## Pantalla Sobre Mi
+
+![Pantalla de Inicio](docs/images/acercaDe.png)
